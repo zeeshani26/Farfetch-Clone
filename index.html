@@ -6,6 +6,11 @@
     <meta name="description" content="width=device-width, initial-scale=1.0">
     <title>Farfetch India - Designer Luxury Fashion for Men &amp; Women</title>
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            
+        }
         #banner{
             font-size: 16px;
             text-align: center;
@@ -86,6 +91,116 @@
             height: 13px;
             margin-top: 10px;
         }
+        #mid-sec>div:first-child h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        #images{
+            margin:auto;
+            width: 85%;
+            border: 0px solid black;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 2px;
+            margin-top: 60px;
+        }
+        #images>div{
+            width: 95%;
+        }
+        #images>div>img{
+            width: 100%;
+            height: 225px;
+        }  
+        .img-text{
+            position: absolute;
+            margin-top: 110px;
+            margin-left: 110px;
+            font-size: 34px;
+            color: white;
+            font-weight: bold;
+            line-height: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            transform: scaleX(.9);
+        }     
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+        #hard-list{
+            margin-top: 70px;
+            padding: 5px;
+            border:0px solid black;
+            margin-left:45px;
+            width: 92.6%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 8px;
+            transform: scaleX(.9);
+            /* background-color: aqua; */
+            line-height: 70px;
+            
+        }
+        .dropbtn {
+            color: black;
+            border: none;
+            cursor: pointer;
+            background-color: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding:10px 4px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            background-color: white;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: whitesmoke;
+        }
+
+        .dropdown {
+            position: relative;
+            width: 100%;
+            padding: 0px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            /* z-index: 1; */
+            padding: 0px;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 0px 8px;
+        font-size: 15px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+        .dropdown>button div{
+            width: 5%;
+            display: flex;
+            margin-top: 0px;
+            padding-top: 0px;
+            height: 30px;
+        }
+        .dropdown>button img{
+            width: 94%; 
+            display: inline; 
+            justify-content: end;
+            padding-top: 0px;
+        }   
+        
     </style>
 </head>
 <body>
@@ -108,6 +223,185 @@
         <input type="text" id="search_box" placeholder="Search">
         <a href="sadsa"><img src="https://cdn-icons-png.flaticon.com/512/61/61088.png"/></a>
     </div>
-    
+    <div id="mid-sec">
+        <div>
+            <h2>Choose a department</h2>
+        </div>
+        <div id="images">
+            <div id="women"><div class="img-text">SHOP WOMEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358584/data/26c82052b460fa54bf9159e47b921911/16x9_three-columns/480/data.png"/></div>
+            <div id="men"><div class="img-text">SHOP MEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358582/data/69b4edecf17743469c8a693815055708/16x9_three-columns/480/data.png"/></div>
+            <div id="kids"><div class="img-text">KIDSWEAR</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/3485568/data/dbf60d813f589cd33fd1105e1bdf95a7/16x9_three-columns/480/data.png"/></div>
+        </div>
+    </div>
+    <div id="hard-list">
+        <div>Featured Brands
+            <div class="dropdown">
+                <button onclick="myFunction(1,1)" class="dropbtn">Men<div><img id="arrow1" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown1" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction(2,2)" class="dropbtn">Women<div><img id="arrow2" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown2" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction(3,3)" class="dropbtn">Kids<div><img id="arrow3" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown3" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+        </div>
+        <div>Trending Now
+            <div class="dropdown">
+                <button onclick="myFunction(4,4)" class="dropbtn">Men<div><img id="arrow4" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown4" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction(5,5)" class="dropbtn">Women<div><img id="arrow5" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown5" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction(6,6)" class="dropbtn">Kids<div><img id="arrow6" src="https://charbase.com/images/glyph/9013"></div></button>
+                <div id="myDropdown6" class="dropdown-content"></div>
+                <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+</html> 
+<script>
+    let array_men = ["Comme Des Garçons Play","Brunello Cucinelli","TOM FORD Eyewear","Thom Browne","visvim","Buscemi","Raf Simons","Axel Arigato","Greg Lauren","Homme Plissé Issey Miyake","Casablanca","Pringle of Scotland","Mastermind Japan","MCM","Maison Kitsuné"]
+    let array_women = ["Paris Texas","Canada Goose","Amina Muaddi","Self-Portrait","Amen","MCM","Stella McCartney","Issey Miyake","Jacquemus","Comme Des Garçons","Aquazzura","Herno","Gianvito Rossi",]
+    let array_kids = ["Fendi Kids","Gucci Kids","Golden Goose Kids","Givenchy Kids","Moschino Kids","Dolce & Gabbana Kids","Bonpoint","Moncler Enfant","Burberry Kids","Balmain Kids","Il Gufo","Versace Kids","The Marc Jacobs Kids","Alexander McQueen Kids","Adidas Yeezy Kids","Balenciaga Kids"]
+    
+    let arrow1=false;
+    let arrow2=false;
+    let arrow3=false;
+    let arrow4=false;
+    let arrow5=false;
+    let arrow6=false;
+    let div_men = document.getElementById("myDropdown1")
+    let div_women = document.getElementById("myDropdown2")
+    let div_kids = document.getElementById("myDropdown3")
+    let div_men2 = document.getElementById("myDropdown4")
+    let div_women2 = document.getElementById("myDropdown5")
+    let div_kids2 = document.getElementById("myDropdown6")
+
+
+    for(i=0;i<array_men.length;i++){
+        anchor = document.createElement("a")
+        anchor2 = document.createElement("a")
+        anchor.innerText = array_men[i];
+        anchor2.innerText = array_men[i];
+        anchor.href = "index.html"
+        anchor2.href = "index.html"
+        div_men.append(anchor)
+        div_men2.append(anchor2)
+    }
+
+    for(i=0;i<array_women.length;i++){
+        anchor = document.createElement("a")
+        anchor2 = document.createElement("a")
+        anchor.innerText = array_women[i];
+        anchor2.innerText = array_women[i];
+        anchor.href = "index.html"
+        anchor2.href = "index.html"
+        div_women.append(anchor)
+        div_women2.append(anchor2)
+    }
+
+    for(i=0;i<array_kids.length;i++){
+        anchor = document.createElement("a")
+        anchor2 = document.createElement("a")
+        anchor.innerText = array_kids[i];
+        anchor2.innerText   = array_kids[i];
+        anchor.href = "index.html"
+        anchor.href = "index.html"
+        div_kids.append(anchor)
+        div_kids2.append(anchor2);
+    }
+
+    function myFunction(j,i) {
+        if(j==1){
+            document.getElementById("myDropdown1").classList.toggle("show");
+        }
+        else if(j==2){
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        else if(j==3){
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+        else if(j==4){
+            document.getElementById("myDropdown4").classList.toggle("show");
+        }
+        else if(j==5){
+            document.getElementById("myDropdown5").classList.toggle("show");
+        }
+        else if(j==6){
+            document.getElementById("myDropdown6").classList.toggle("show");
+        }
+        if(i==1 && arrow1==false){
+            document.getElementById("arrow1").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow1 = true;
+        }
+        else{
+            document.getElementById("arrow1").src = "https://charbase.com/images/glyph/9013"
+            arrow1 = false;
+        }
+        if(i==2 && arrow2==false){
+            document.getElementById("arrow2").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow2 = true;
+        }
+        else{
+            document.getElementById("arrow2").src = "https://charbase.com/images/glyph/9013"
+            arrow2 = false;
+        }
+        if(i==3 && arrow3==false){
+            document.getElementById("arrow3").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow3 = true;    
+        }
+        else{
+            document.getElementById("arrow3").src = "https://charbase.com/images/glyph/9013"
+            arrow3 = false;
+        }
+        if(i==4 && arrow4==false){
+            document.getElementById("arrow4").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow4 = true
+        }
+        else{
+            document.getElementById("arrow4").src = "https://charbase.com/images/glyph/9013"
+            arrow4 = false;
+        }
+        if(i==5 && arrow5==false){
+            document.getElementById("arrow5").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow5 = true;
+        }
+        else{
+            document.getElementById("arrow5").src = "https://charbase.com/images/glyph/9013"
+            arrow5 = false;
+        }
+        if(i==6 && arrow6==false){
+            document.getElementById("arrow6").src = "https://w7.pngwing.com/pngs/28/816/png-transparent-arrow-computer-icons-symbol-up-arrow-angle-rectangle-triangle.png"
+            arrow6 = true
+        }
+        else{
+            document.getElementById("arrow6").src = "https://charbase.com/images/glyph/9013"
+            arrow6 = false;
+        }
+    }
+
+    // button.onclick = function(event) {
+    //   if (!event.target.matches('.dropbtn')) {
+    //     var dropdowns = document.getElementsByClassName("dropdown-content1");
+    //     var i;
+    //     for (i = 0; i < dropdowns.length; i++) {
+    //       var openDropdown = dropdowns[i];
+    //       if (openDropdown.classList.contains('show')) {
+    //         openDropdown.classList.remove('show');
+    //       }
+    //     }
+    //   }
+    // }
+    </script>
