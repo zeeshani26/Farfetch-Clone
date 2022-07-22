@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        body{
+            width:100%;
+            overflow-x:hidden;
+        }
+        #banner{
+            font-size: 16px;
+            text-align: center;
+            background-color: #E6E6E6;
+            padding: 20px 0px;
+            font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+            font-style:normal;
+            font-weight: 400;
+            color: #222222;
+            overflow: hidden;
+        }
+        #search>input{
+            padding: 5px;
+        }
+        #navbar{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 25% 25% 30%;
+            column-gap: 15%;
+        }
+        
+        #navbar>div:last-child div{
+            width: 25px;
+            height: 20px;
+            padding: 0;
+            margin: 8px;
+            border: 0px;
+            background-color: white;
+            margin-right: 10px;
+        }
+        #navbar>div:last-child{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #navbar img{
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0;
+        }
+        #navbar>div:nth-child(2){
+            margin-left: 50px;
+        }
+        
+        #navbar>div:nth-child(2) img{
+            width:60%;
+            height: 27px;
+        }
+        #navbar>div:first-child{
+            margin-left: 100px;
+        }
+        #search{
+            display: flex;
+            border: 1px solid rgb(128, 128, 128);
+            justify-content: flex-start;
+            width: 10%;
+            padding-right: 50px;
+            margin-left: 1170px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #search input{
+            padding: 8px;
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+            border: 0px solid red;
+            width: 200px;
+            font-size: 13px;
+        }
+        #navbar>div:first-child a{
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #search img{
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            margin-top: 10px;
+            border: 0px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">Incoming&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<u>Shop the latest arrivals here</u></div>
+    <div id="navbar">
+        <div>
+        <a href="index.html">Women&nbsp;&nbsp;&nbsp;</a>
+        <a href="index.html">Men&nbsp;&nbsp;&nbsp;</a>
+        <a href="index.html">Kids</a>
+        </div>
+        <div><img src="https://www.farfetch.com/static/images/logo.png"/></div>
+        <div>
+        <div><a href="index.html"><img src="https://www.freeiconspng.com/uploads/indian-flag-icon-0.png"/> </a></div>
+        <div><a href="index.html"><img src="https://www.peachtreebooks.com/wp-content/themes/peachtree/images/avatar.png"/> </a></div>
+        <div><a href="index.html"><img src="https://typogram.github.io/Anicons/images/about2-p-500.png"/> </a></div>
+        <div><a href="index.html"><img src="https://cdn.iconscout.com/icon/free/png-256/shopping-bag-1438634-1214045.png"/> </a></div>
+        </div>
+    </div>
+    <div id="search">
+        <input type="text" placeholder="Search">
+        <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/61/61088.png"/></a>
+    </div>
+    <div id="products">
+    </div>
+</body>
+</html>
+<script>
+    product_data = [{"image":"https://cdn-images.farfetch-contents.com/17/52/98/21/17529821_36750527_480.jpg","name":"Valentino","description":"Neon Universe print bomber jacket","discount":"-40%","final_price":"$1,126"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/77/82/07/17778207_40014742_480.jpg","name":"Jil Sander","description":"straight-leg cropped trousers","discount":"-60%","final_price":"$337"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/32/19/25/18321925_40086555_480.jpg","name":"Vetements","description":"printed sleeve long-sleeve T-shirt","discount":"","final_price":"$883"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/26/66/24/17266624_39745909_480.jpg","name":"Bethany Williams","description":"Magpie and Baby wool jumper","discount":"-60%","final_price":"$1,271"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/43/52/22/18435222_39579040_480.jpg","name":"Heron Preston","description":"logo-print organic cotton T-shirt","discount":"-50%","final_price":"$192"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/90/69/35/17906935_40353301_480.jpg","name":"Stone Island Shadow","description":"pocketed cargo shorts","discount":"-50%","final_price":"$379"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/57/29/02/17572902_38962545_480.jpg","name":"Palm Angels","description":"mix-print cargo trousers","discount":"-45%","final_price":"$770"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/51/50/12/17515012_39223459_480.jpg","name":"AMIRI","description":"Satin Flames Souvenir varsity jacket","discount":"-50%","final_price":"$1,994"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/77/64/12/17776412_39387600_480.jpg","name":"By Walid","description":"Chico tie-dye short-sleeve shirt","discount":"-60%","final_price":"$440"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/56/53/88/18565388_40048763_480.jpg","name":"Thom Browne","description":"multi-panel zip-fastening jacket","discount":"","final_price":"$4,165"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/52/98/05/17529805_36575225_480.jpg","name":"Valentino","description":"VLogo straight-leg jeans","discount":"-40%","final_price":"$489"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/57/06/62/18570662_40429986_480.jpg","name":"Palm Angels","description":"graffiti-print logo T-shirt","discount":"","final_price":"$445"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/51/33/36/17513336_39704535_480.jpg","name":"AMI Paris","description":"logo-embroidered organic cotton hoodie","discount":"-50%","final_price":"$254"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/07/93/89/18079389_c1dbac35-402b-4876-8507-63d31d81b162_480.jpg","name":"Kenzo","description":"flame-print branded short-sleeve shirt","discount":"-50%","final_price":"$247"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/53/61/60/18536160_39994159_480.jpg","name":"Off-White","description":"Industrail-belt cargo shorts","discount":"","final_price":"$825"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/64/84/10/17648410_39235251_480.jpg","name":"Moncler","description":"Sattouf hooded windbreaker jacket","discount":"","final_price":"$1,255"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/58/53/34/17585334_7da533f9-5a07-42ae-9526-1fceebba5303_480.jpg","name":"Jil Sander","description":"cropped straight-leg trousers","discount":"-40%","final_price":"$462"},
+    {"image":"https://cdn-images.farfetch-contents.com/18/45/81/77/18458177_40628662_480.jpg","name":"Marni","description":"graphic-print T-shirt","discount":"","final_price":"$580"},
+    {"image":"https://cdn-images.farfetch-contents.com/17/68/13/05/17681305_40260483_480.jpg","name":"Versace","description":"retro-style varsity jacket","discount":"50%","final_price":"$2,371"}]
+</script>
+<script>
+    
+</script>

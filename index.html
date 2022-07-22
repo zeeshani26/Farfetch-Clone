@@ -8,8 +8,11 @@
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            
+            font-size: 18px;
+        }
+        body{
+            width:100%;
+            overflow-x:hidden;
         }
         #banner{
             font-size: 16px;
@@ -79,6 +82,9 @@
             background-color: transparent;
             resize: none;
             outline: none;
+            border: 0px solid red;
+            width: 200px;
+            font-size: 13px;
         }
         #navbar>div:first-child a{
             color: black;
@@ -87,9 +93,11 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         #search img{
+            position: absolute;
             width: 13px;
             height: 13px;
             margin-top: 10px;
+            border: 0px solid black;
         }
         #mid-sec>div:first-child h2{
             text-align: center;
@@ -107,18 +115,20 @@
             grid-template-columns: repeat(3, 1fr);
             column-gap: 2px;
             margin-top: 60px;
+            
         }
-        #images>div{
+        #images div{
             width: 95%;
         }
-        #images>div>img{
+        #images div img{
             width: 100%;
             height: 225px;
+            overflow-x: hidden;
         }  
         .img-text{
             position: absolute;
             margin-top: 110px;
-            margin-left: 110px;
+            margin-left: 35px;
             font-size: 34px;
             color: white;
             font-weight: bold;
@@ -126,7 +136,6 @@
             font-family: Arial, Helvetica, sans-serif;
             transform: scaleX(.9);
         }     
-    /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
         #hard-list{
             margin-top: 70px;
             padding: 5px;
@@ -164,16 +173,17 @@
             position: relative;
             width: 100%;
             padding: 0px;
+            overflow-x: hidden;
         }
 
         .dropdown-content {
             display: none;
             position: relative;
             min-width: 160px;
-            overflow: auto;
+            /* overflow: auto; */
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            /* z-index: 1; */
             padding: 0px;
+            overflow-x: hidden;
         }
 
         .dropdown-content a {
@@ -199,7 +209,104 @@
             display: inline; 
             justify-content: end;
             padding-top: 0px;
-        }   
+        }
+        .fill-div{
+            display: absolute;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            overflow-x: hidden;
+            color: black;
+        }
+        #info-box{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            width: 88%;
+            margin: auto;
+            margin-top: 100px;
+        }
+        #info-box>div{
+            border: 1px solid rgb(212, 211, 211);
+            width:100%;
+            padding: 40px 20px;
+            line-height: 20px;
+            transform: scaleX(.9) scaleY(.8);
+            margin: 10px auto;
+        }
+        .info-icons{
+            display: inline;
+            width: 24px;
+        } 
+        #info-box>div:hover{
+            background-color: #ddd;
+        }
+        #bottom-banner{
+            margin-top: 100px;
+            padding: 20px 60px 60px 60px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 80px;
+        }
+        #bottom-banner p{
+            border: 0px solid white;
+            font-size: 14px;
+        }
+        #small_icon img{
+            display: inline;
+            width: 6%;
+            padding-right: 10px;
+        }
+        #small_icon{
+            padding-bottom: 50px;
+        }
+        #download{
+            border: 0px solid black;
+            width: 50%;
+            margin: auto;
+            transform: scaleX(.9) scaleY(.8);
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+        #qr{
+            margin: auto;
+        }
+        #qr img{
+            display: inline;
+            width:150px;
+        }
+        #email{
+            padding:20px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            width: 280px;
+        }
+        #send{
+            background-color: black;
+            color: white;
+            padding: 18px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        #download>p:first-child{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #download a{
+            color: black;
+        }
+        #send:hover{
+            cursor: pointer; ;
+        }
+        #bottom-banner p:hover, img:hover{
+            cursor: pointer;
+        }
         
     </style>
 </head>
@@ -207,30 +314,30 @@
     <div id="banner">Incoming&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<u>Shop the latest arrivals here</u></div>
     <div id="navbar">
         <div>
-        <a href="hsdas">Women&nbsp;&nbsp;&nbsp;</a>
-        <a href="sadsd">Men&nbsp;&nbsp;&nbsp;</a>
-        <a href="sdkasdj">Kids</a>
+        <a href="index.html">Women&nbsp;&nbsp;&nbsp;</a>
+        <a href="mens.html">Men&nbsp;&nbsp;&nbsp;</a>
+        <a href="index.html">Kids</a>
         </div>
         <div><img src="https://www.farfetch.com/static/images/logo.png"/></div>
         <div>
-        <div><a href="sadsa"><img src="https://www.freeiconspng.com/uploads/indian-flag-icon-0.png"/> </a></div>
-        <div><a href="asad"><img src="https://www.peachtreebooks.com/wp-content/themes/peachtree/images/avatar.png"/> </a></div>
-        <div><a href="sadsa"><img src="https://typogram.github.io/Anicons/images/about2-p-500.png"/> </a></div>
-        <div><a href="sdasd"><img src="https://cdn.iconscout.com/icon/free/png-256/shopping-bag-1438634-1214045.png"/> </a></div>
+        <div><a href="index.html"><img src="https://www.freeiconspng.com/uploads/indian-flag-icon-0.png"/> </a></div>
+        <div><a href="user.html"><img src="https://www.peachtreebooks.com/wp-content/themes/peachtree/images/avatar.png"/> </a></div>
+        <div><a href="index.html"><img src="https://typogram.github.io/Anicons/images/about2-p-500.png"/> </a></div>
+        <div><a href="index.html"><img src="https://cdn.iconscout.com/icon/free/png-256/shopping-bag-1438634-1214045.png"/> </a></div>
         </div>
     </div>
     <div id="search">
-        <input type="text" id="search_box" placeholder="Search">
-        <a href="sadsa"><img src="https://cdn-icons-png.flaticon.com/512/61/61088.png"/></a>
+        <input type="text" placeholder="Search">
+        <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/61/61088.png"/></a>
     </div>
     <div id="mid-sec">
         <div>
             <h2>Choose a department</h2>
         </div>
         <div id="images">
-            <div id="women"><div class="img-text">SHOP WOMEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358584/data/26c82052b460fa54bf9159e47b921911/16x9_three-columns/480/data.png"/></div>
-            <div id="men"><div class="img-text">SHOP MEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358582/data/69b4edecf17743469c8a693815055708/16x9_three-columns/480/data.png"/></div>
-            <div id="kids"><div class="img-text">KIDSWEAR</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/3485568/data/dbf60d813f589cd33fd1105e1bdf95a7/16x9_three-columns/480/data.png"/></div>
+            <div id="women"><a href="index.html" class="fill-div"><div class="img-text">SHOP WOMEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358584/data/26c82052b460fa54bf9159e47b921911/16x9_three-columns/480/data.png"/></a></div>
+            <div id="men"><a href="index.html" class="fill-div"><div class="img-text">SHOP MEN</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/1358582/data/69b4edecf17743469c8a693815055708/16x9_three-columns/480/data.png"/></a></div>
+            <div id="kids"><a href="index.html" class="fill-div"><div class="img-text">KIDSWEAR</div><img src="https://cdn-static.farfetch-contents.com/cms-cm10/caas/v1/media/3485568/data/dbf60d813f589cd33fd1105e1bdf95a7/16x9_three-columns/480/data.png"/></a></div>
         </div>
     </div>
     <div id="hard-list">
@@ -267,6 +374,85 @@
                 <div id="myDropdown6" class="dropdown-content"></div>
                 <div style="height: .8px; background-color: rgb(221, 219, 219)"></div>
             </div>
+        </div>
+    </div>
+    <div id="info-box">
+        <div>
+            <a href="index.html" class="fill-div">
+            <div><img class="info-icons" src="https://icon-library.com/images/clothes-icon/clothes-icon-24.jpg"/>
+            <p>HOW TO SHOP</p>
+            <p>Your guide to shopping and placing orders</p>
+            </div>
+            </a>    
+        </div>
+        <div>
+            <a href="index.html" class="fill-div">
+            <div>
+            <img class="info-icons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1024px-Icon-round-Question_mark.svg.png"/>
+            <p>FAQS</p>
+            <p>Your questions answered</p>
+            </div>
+            </a>
+        </div>
+        <div>
+            <a href="index.html" class="fill-div">
+            <div>
+            <img class="info-icons" src="https://cdn.iconscout.com/icon/free/png-256/chat-bubble-1438160-1213943.png"s/>
+            <p>NEED HELP?</p>
+            <p>Contact our global Customer Service team</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div id="download">
+        <p>DOWNLOAD THE FARFETCH APP</p>
+        <p>Enjoy exclusive content on our app, including personalized product edits as well as our Visual Search tool for iOS.<a href="index.html">More about the app</a></p>
+        <div id="container">
+            <div id="email-box">
+                <p>EMAIL ME</p>
+                <p>Enter your email and we'll send you a link to download the free app</p>
+                <input placeholder="Email Address" type="text" id="email"> <a href="index.html"><button id="send" type="button">Send</button></a>
+            </div>
+            <div id="qr">
+                <p>SCAN QR CODE</p>
+                <img src="https://media.blackandwhite-ff.com/10000/2a0d5342-2544-4898-b2d4-8272235868d6_qr.png">
+            </div>
+        </div>
+    </div>
+    <div id="bottom-banner">
+        <div>
+            <p>FARFETCH APP</p>
+            <p>Farfetch App for iOS and Android</p>
+        </div>
+        <div>
+            <p>DESTINATION/REGION, CURRENCY AND LANGUAGE</p>
+            <div id="small_icon"><p><img src="https://www.freeiconspng.com/uploads/indian-flag-icon-0.png  "/>India, USD $</p></div>
+            <p>FOLLOW US</p>
+            <div id="social_icon"><img src="https://i.ibb.co/gJZKMf3/new-Instagram-logo-white-glyph.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/W2mtLXF/facebook-7-xxl.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/XLrCVmB/twitter-xxl.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/THqPd2V/snapchat-xxl.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/WgsLBgs/images.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/ypKh2Ng/121504.jpg"/></div>
+        </div>
+        <div id="service">
+            <p>Contact us</p>
+            <p>Orders & delivery</p>
+            <p>Payment & pricing</p>
+            <p>Returns & refunds</p>
+            <p>FAQs</p>
+            <p>Terms & conditions</p>
+            <p>Promotion terms & conditions</p>
+            <p>Privacy policy</p>
+            <p>Accessibility</p>
+        </div>
+        <div id="about">
+            <p>About Us</p>
+            <p>Investors</p>
+            <p>Boutique Partners</p>
+            <p>Affiliate Programme</p>
+            <p>Youth discount</p>
+            <p>Careers</p>
+            <p>Customer Promise</p>
+            <p>FARFETCH App</p>
+            <p>Sitemap</p>
+            <p>Sitemap</p>
+            <p>Positively FARFETCH</p>
         </div>
     </div>
 </body>
@@ -391,17 +577,4 @@
             arrow6 = false;
         }
     }
-
-    // button.onclick = function(event) {
-    //   if (!event.target.matches('.dropbtn')) {
-    //     var dropdowns = document.getElementsByClassName("dropdown-content1");
-    //     var i;
-    //     for (i = 0; i < dropdowns.length; i++) {
-    //       var openDropdown = dropdowns[i];
-    //       if (openDropdown.classList.contains('show')) {
-    //         openDropdown.classList.remove('show');
-    //       }
-    //     }
-    //   }
-    // }
     </script>
