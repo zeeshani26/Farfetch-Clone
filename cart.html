@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mens</title>
-    <link rel="stylesheet" href="./Styles/mens.css" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="./Styles/cart.css" />
 </head>
 <body>
     <div id="banner">Incoming&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<u>Shop the latest arrivals here</u></div>
     <div id="navbar">
         <div>
         <a href="index.html">Women&nbsp;&nbsp;&nbsp;</a>
-        <a href="index.html">Men&nbsp;&nbsp;&nbsp;</a>
+        <a href="mens.html">Men&nbsp;&nbsp;&nbsp;</a>
         <a href="index.html">Kids</a>
         </div>
         <div><img src="https://www.farfetch.com/static/images/logo.png"/></div>
@@ -27,14 +27,10 @@
         <input type="text" placeholder="Search">
         <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/61/61088.png"/></a>
     </div>
-    <select id="filter">
-        <option value="">Select Category</option>
-        <option value="tshirt_shirt">T-Shirt And Shirt</option>
-        <option value="trousers_short">Trousers And Shorts</option>
-        <option value="jackets_sweaters">Jackets And Sweaters</option>
-    </select>
-    <div id="container">
-
+    <div id="container"></div>
+    <div id="final">
+    <h4>Total Cart Value: $<span id="total_price">0</span></h4>
+    <button id="checkout">Checkout &nbsp;&nbsp;></button> 
     </div>
     <div id="bottom-banner">
         <div>
@@ -72,6 +68,7 @@
             <p>Positively FARFETCH</p>
         </div>
     </div>
+
 </body>
 </html>
-<script src="./Scripts/mens.js"></script>
+<script src="./Scripts/cart.js"></script>
